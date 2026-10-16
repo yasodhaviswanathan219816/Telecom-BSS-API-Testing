@@ -1,0 +1,153 @@
+{
+  "info": {
+    "_exporter_id": "20321980",
+    "_postman_id": "7e535fdf-8134-4e10-8e6f-70ebaca86681",
+    "name": "Telecom BSS QA Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "TC01-Generate Access Token",
+      "request": {
+        "body": {
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "raw": "{\n    \"clientId\": \"developer\",\n    \"clientSecret\": \"YOUR_CLIENT_SECRET\"\n}"
+        },
+        "header": [],
+        "method": "POST",
+        "url": {
+          "host": [
+            "api",
+            "merrt",
+            "com",
+            "tr"
+          ],
+          "path": [
+            "auth",
+            "token"
+          ],
+          "protocol": "https",
+          "raw": "https://api.merrt.com.tr/auth/token"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"access_token\": \"{{json_web_token_02hi}}\",\n  \"token_type\": \"Bearer\",\n  \"expires_in\": 3600,\n  \"expires_at\": \"2026-10-16T10:35:27.000Z\",\n  \"subject\": \"developer\",\n  \"roles\": [\n    \"USER\"\n  ],\n  \"scope\": \"merrt:sandbox\"\n}",
+          "cookie": [],
+          "header": [
+            {
+              "key": ":status",
+              "value": "200"
+            },
+            {
+              "key": "date",
+              "value": "Fri, 16 Oct 2026 09:35:27 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "x-request-id",
+              "value": "418eaa34-7721-403a-abbc-88526bd46855"
+            },
+            {
+              "key": "report-to",
+              "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=tzU7TkAsvXyUMz%2Fbzo2ogmM%2BEteN5LEguUKcsUJXqFJgop03teP8wgKiyR5Ie0HinclcUiRXx%2BJnecCsLKtBsrdcd1X9eFDk6dzNBR0%2FcMHWL2oxZVjNjpZaMsqpPUPEELaq\"}]}"
+            },
+            {
+              "key": "nel",
+              "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "access-control-allow-headers",
+              "value": "Authorization, Content-Type, X-Mock-Scenario, X-Request-Id, Accept-Language"
+            },
+            {
+              "key": "access-control-allow-methods",
+              "value": "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+            },
+            {
+              "key": "access-control-expose-headers",
+              "value": "X-RateLimit-Limit, X-RateLimit-Remaining, X-Request-Id, X-Payment-Outcome, X-Payment-Code, Retry-After, Location"
+            },
+            {
+              "key": "access-control-max-age",
+              "value": "86400"
+            },
+            {
+              "key": "x-ratelimit-limit",
+              "value": "100"
+            },
+            {
+              "key": "x-ratelimit-remaining",
+              "value": "99"
+            },
+            {
+              "key": "content-encoding",
+              "value": "br"
+            },
+            {
+              "key": "vary",
+              "value": "accept-encoding"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "a4b612d59c16fbb0-JNB"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            }
+          ],
+          "name": "Generate Access Token",
+          "originalRequest": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\n    \"clientId\": \"developer\",\n    \"clientSecret\": \"dev-sandbox-2026\"\n}"
+            },
+            "header": [],
+            "method": "POST",
+            "url": {
+              "host": [
+                "api",
+                "merrt",
+                "com",
+                "tr"
+              ],
+              "path": [
+                "auth",
+                "token"
+              ],
+              "protocol": "https",
+              "raw": "https://api.merrt.com.tr/auth/token"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

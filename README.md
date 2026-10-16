@@ -28,8 +28,7 @@ Charging and balance-related scenarios, where supported by the API
 Error response and negative testing
 ## Important Note 
 This is an independent learning project using a simulated telecom API. It is not testing a live telecom operator's production systems and does not represent professional project experience in a telecom BSS environment.
-
-##Security
+## Security
 Access tokens, client secrets, passwords, and other sensitive credentials will not be committed to this repository.
 
 
